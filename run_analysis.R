@@ -1,10 +1,4 @@
-#Assignment request
-#1Merges the training and the test sets to create one data set.
-#2Extracts only the measurements on the mean and standard deviation for each measurement. 
-#3Uses descriptive activity names to name the activities in the data set
-#4Appropriately labels the data set with descriptive variable names. 
-#5Creates a second, independent tidy data set with the average of each variable
-#for each activity and each subject. 
+#course project 
 
 #Check and set working directory
 
@@ -53,13 +47,14 @@ traintest <- traintest[,c(varlist,562,563)]
 
 varnameclean <- gsub("-|\\(|\\)",'',varname)
 
-
+# add cleaned varible names back to dataset
 as.vector(varnameclean)
 
 names(traintest) <- c(varnameclean,"act","subjectid") 
 
+
 #Step:3 Uses descriptive activity names to name the activities in the data set
-## read activity labels from activity_labels.txt
+# read activity labels from activity_labels.txt
 
 activitylabel <- read.table("./UCI HAR Dataset/activity_labels.txt")
 
@@ -101,14 +96,8 @@ summarynames <- gsub('__','_',summarynames14)
 #add descript names into data
 colnames(tidysummary) <- summarynames
 
-#output data out to a text file
+#export tidy data 
  
 write.table(tidysummary, file = "summary.txt", sep = ",", col.names = colnames(tidysummary))
-
-# read it back in
-summarytest <- read.table(file = "summary.txt",sep = ",", header = TRUE, stringsAsFactors = F) 
-
-#test if two files are the same
-all(tidysummary == summarytest) 
 
 
