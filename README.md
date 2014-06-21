@@ -1,6 +1,6 @@
 ==================================================
 ##"Getting and Cleaning Data" course project
-##created on 2014/06/20 
+###        created on 2014/06/20 
 ==================================================
 
 ### Overview
@@ -46,12 +46,12 @@ adding 'act' and 'subjectid' to traintest dataset.
 Read activity_labels.txt using read.table() into R and merge it by activty identifier with traintest dataset to create tidy dataset called tidydata,reorder variables and change variables name 'act' to 'activity'.
 
 #### step 4.
-Summarize each measurements group by subjectid and activity using aggregate() function, and make variable names readable by adding '_' between all
-lower case characters.
+Summarize each measurements group by subjectid and activity using aggregate() function, and make variable names readable by adding '_' between all lower case characters.
 
+### Other 
 Detail programming explanation can be seen from the comments line in run_anlaysis.R.
 
-Detail infomration about variable names convention and data dictionary can be found at cookbook.MD.
+Detail information about variable names convention and data dictionary can be found at cookbook.md.
 
 
 
