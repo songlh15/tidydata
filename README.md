@@ -15,10 +15,10 @@ and the data can be downloaded from https://d396qusza40orc.cloudfront.net/getdat
 
 ### The whole project includes:
 
-*Readme.md: This readme file.
-*cookbook.md: It includes description, rules to create tidydata, description of variables names and data type.
-*run_analysis.R: A R script to clean, prepare the tidy data and do basic analysis.
-*mean_of_measures.txt: A tidy dataset including subject identifier, activity lable and calculated mean of all measurements by each subject and each activity. It can be read into R by
+* Readme.md: This readme file.
+* cookbook.md: It includes description, rules to create tidydata, description of variables names and data type.
+* run_analysis.R: A R script to clean, prepare the tidy data and do basic analysis.
+* mean_of_measures.txt: A tidy dataset including subject identifier, activity lable and calculated mean of all measurements by each subject and each activity. It can be read into R by
  read.table(file = "mean_of_measures.txt",sep = ",", header = TRUE, stringsAsFactors = F). 
  
 Please note that in the R script, there are two tidy datasets, one is called tidydata, the other is tidysummary, which was saved as mean_of_measures.txt and was uploaded per project request.

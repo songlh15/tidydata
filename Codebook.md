@@ -1,4 +1,4 @@
-## Coursera course "Getting and cleaning data' project cookbook
+##  "Getting and cleaning data' course project cookbook
 
 ### Why it is tidy.
 
