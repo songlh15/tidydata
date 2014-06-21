@@ -1,0 +1,17 @@
+{
+    "contents" : "#assignment 2\n\n\nif(getwd() != \"C:/Users/Song/Dropbox/Coursera/cleaningdata/UCI HAR Dataset\")\n  setwd(\"C:/Users/Song/Dropbox/Coursera/cleaningdata/UCI HAR Dataset\")\n\nfeature <- read.table(\"features.txt\")\nactivitylabel <- read.table(\"activity_labels.txt\")\n\n#find mean and std\nfeatures <- feature[(grep('mean()|std()',feature$V2)),]\n\n\ntrainx <- read.table(\"./train/X_train.txt\")\ntrainy <- read.table(\"./train/y_train.txt\")\ntrainid <- read.table(\"./train/subject_train.txt\")\n\n\n#get only those mean and std variables\nvarlist <- as.vector(unique(features$V1))\nvarname <- as.vector(unique(features$V2))\n\n#clean variable name by removing '()' and '-'\n\nvarnameclean <- gsub(\"-|\\\\(|\\\\)\",'',varname)\n\n#keep only those varialbes we are intrested in\ntrainvar <- trainx[,varlist]\n\n#adding variable names\nnames(trainvar) <- varnameclean\n#names(trainvar)\n\n#assing variable name for subject and activities\n\n#adding trainactivity by merging trainy with activity\n\nnames(trainid) <- \"subject\"\n\n#merging train data\ntraindata <- cbind(trainid,trainy,trainvar);\n\n#adding activity label\ntraindata <- merge(traindata,activitylabel,by.x='V1',by.y='V1',all=F)\n\n#rename V2 as activity\ncolnames(traindata)[82] <- \"activity\"\n\n#remove V1 from dataset\ntraindata <- traindata[,-1]\n\n#above complete the train dataset,similary we can do the same for test data\n\ntestx <- read.table(\"./test/X_test.txt\")\ntesty <- read.table(\"./test/y_test.txt\")\ntestid <- read.table(\"./test/subject_test.txt\")\n\n\n#get only those mean and std variables\nvarlist <- as.vector(unique(features$V1))\nvarname <- as.vector(unique(features$V2))\n\n#clean variable name by removing '()' and '-'\n\nvarnameclean <- gsub(\"-|\\\\(|\\\\)\",'',varname)\n\n#keep only those varialbes we are intrested in\ntestvar <- testx[,varlist]\n\n#adding variable names\nnames(testvar) <- varnameclean\n#names(testvar)\n\n#assing variable name for subject and activities\n\n#adding testactivity by merging testy with activity\n\nnames(testid) <- \"subject\"\n\n#merging test data\ntestdata <- cbind(testid,testy,testvar);\n\n#adding activity label\ntestdata <- merge(testdata,activitylabel,by.x='V1',by.y='V1',all=F)\n\n#rename V2 as activity\ncolnames(testdata)[82] <- \"activity\"\n\n#remove V1 from dataset\ntestdata <- testdata[,-1]\n\n\n\n",
+    "created" : 1403057257503.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2318418213",
+    "id" : "67A70F07",
+    "lastKnownWriteTime" : 1403117305,
+    "path" : "C:/Users/Song/Dropbox/Coursera/cleaningdata/UCI HAR Dataset/tidy.R",
+    "project_path" : "tidy.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1403211042603.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F2016D8D",
+    "lastKnownWriteTime" : 578055781,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "activitylabel",
+        "contentUrl" : "content?title=activitylabel&file=a3ea778934844979a562573b695ea508.htm",
+        "displayedObservations" : 6,
+        "displayedVariables" : 2,
+        "totalObservations" : 6,
+        "variables" : 2
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
