@@ -2,7 +2,7 @@
 
 ### Why it is tidy.
 
-The tidy dataset tidysummary(uploaded as mean_of_measures.txt) was created by calculating the mean of each measurement. It has 180 rows and 68 columns. It is a tidy data set because 1) each row is one observation 2) each colomn is one measurement 3) it is one type of table 4) there is one link key 'subjectid' can be linked to other table if needed. Note that it is in a wide format, so it needs to be downloaded and read into R to see this data set in a proper way. A csv version of this tidy data set mean_of_measures.csv is also included for easy review. 
+The tidy dataset tidysummary(uploaded as mean_of_measures.txt) was created by calculating the mean of each measurement. It has 180 rows and 68 columns. It is a tidy data set because 1) each row is one observation 2) each column is one measurement 3) it is one type of table 4) there is one link key 'subjectid' can be linked to other table if needed. Note that it is in a wide format, so it may need to be downloaded and read into R to see this data set in a proper format or click on the Github link to read in Github . A csv version of this tidy data set mean_of_measures.csv is also included for easy review. 
  
 ### Reason for using underscore in variable names.
 
