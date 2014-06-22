@@ -30,7 +30,7 @@ Since this project request us to calculate the mean of the measurements, 'averag
 
 ### Data dictionary:
 
-There are 68 variables in this dataset.First variale 'subjectid' is subject identifier ranges from 1 to 30, second variable 'activity' includes six levels of acitivities include WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITING ,STANDING AND LAYING. Variable number 3 to 68 are calculated average values from each measurement by each subjectid and each activity, so they are numeric. A list of variable names by their order in the tidy data set is as following:
+There are 68 variables in this dataset.First variale 'subjectid' is subject identifier ranges from 1 to 30, second variable 'activity' includes six levels of activities include WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITING ,STANDING AND LAYING. Variable number 3 to 68 are calculated average values from each measurement by each subjectid and each activity, so they are numeric. A list of variable names by their order in the tidy data set is as following:
 
  [1] "subjectid"                                               
  [2] "activity"                                                
