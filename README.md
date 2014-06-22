@@ -40,7 +40,7 @@ then using rbind() to concatenate two datasets traindata and testdata into one d
 #### Step 2.
 
 Read feasures.txt in using read.table() and get rid of special characters like '()-' to make varialbe names easy 
-to handle. Using grep() to find those varialbes with 'mean()' or 'std()' and exclude meanFreq using sqlpf(), subset and keep only those variables, adding 'act' and 'subjectid' to traintest dataset.
+to handle. Using grep() to find those varialbes with 'mean()' or 'std()' and exclude meanFreq using sqldf(), subset and keep only those variables, adding 'act' and 'subjectid' to traintest dataset.
 
 
 #### step 3.
@@ -54,7 +54,7 @@ Create the wide format tidy dataset called tidysummary and output it to mean_of_
 
 
 ### Other comments
-Detail programming explanation can be seen from the comments line in run_anlaysis.R.
+Detail programming explanation can be seen from the comment lines in run_analysis.R.
 
 Detail information about variable names convention and data dictionary can be found at cookbook.md.
 
