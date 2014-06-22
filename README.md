@@ -1,6 +1,6 @@
 ==================================================
-##"Getting and Cleaning Data" course project
-###        created on 2014/06/20 
+##"Getting and Cleaning Data" Course Project
+###created on 2014/06/20 and updated on 2014/06/22
 ==================================================
 
 ### Overview
@@ -21,7 +21,7 @@ and the data can be downloaded from https://d396qusza40orc.cloudfront.net/getdat
 * mean_of_measures.txt: A tidy dataset including subject identifier, activity lable and calculated mean of all measurements by each subject and each activity. It can be read into R by
  read.table(file = "mean_of_measures.txt",sep = ",", header = TRUE, stringsAsFactors = T). 
 * mean_of_measures.csv: tidy dataset in comma separated valued file format.
-
+* UCI HAR Dataset: the downloaded raw dataset.
 Please note that in the R script, there are two tidy datasets, one is called tidydata, the other is tidysummary, which was saved as mean_of_measures.txt and was uploaded per project request.
 
 ### Programming:
