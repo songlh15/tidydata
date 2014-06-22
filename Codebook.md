@@ -30,89 +30,8 @@ Since this project request us to calculate the mean of the measurements, 'averag
 
 ### Data dictinary:
 
-There are 81 variables in this dataset,except first variale 'subjectid' and second variable 'activity', variable number 3 to 81 are calculated average value from each measurement by each subjectid and each activity, so they are numeric. A list of variables by their order in the dataset is as following:
+There are 81 variables in this dataset. except first variale 'subjectid' is subject identifier range from 1 to 30, second variable 'activity' includes six levels of acitivities include WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITING ,STANDING AND LAYING. Variable number 3 to 81 are calculated average values from each measurement by each subjectid and each activity, so they are numeric. A list of variables by their order in the dataset is as following:
 
-* subjectid:  subject identifier range from 1 to 30.                                             
-* activity:   six levels of acitivities include WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITING ,STANDING AND LAYING.                                                   
-*  average_time_body_accelerometer_mean_xaxis
-*  average_time_body_accelerometer_mean_yaxis                   
-*  average_time_body_accelerometer_mean_zaxis                   
-*  average_time_body_accelerometer_std_xaxis                    
-*  average_time_body_accelerometer_std_yaxis                    
-*  average_time_body_accelerometer_std_zaxis                    
-*  average_time_gravity_accelerometer_mean_xaxis                
-*  average_time_gravity_accelerometer_mean_yaxis                
-*  average_time_gravity_accelerometer_mean_zaxis                
-*  average_time_gravity_accelerometer_std_xaxis                 
-*  average_time_gravity_accelerometer_std_yaxis                 
-*  average_time_gravity_accelerometer_std_zaxis                 
-*  average_time_body_accelerometer_jerk_mean_xaxis              
-*  average_time_body_accelerometer_jerk_mean_yaxis              
-*  average_time_body_accelerometer_jerk_mean_zaxis              
-*  average_time_body_accelerometer_jerk_std_xaxis               
-*  average_time_body_accelerometer_jerk_std_yaxis               
-*  average_time_body_accelerometer_jerk_std_zaxis               
-*  average_time_body_gyroscope_mean_xaxis                       
-*  average_time_body_gyroscope_mean_yaxis                       
-*  average_time_body_gyroscope_mean_zaxis                       
-*  average_time_body_gyroscope_std_xaxis                        
-*  average_time_body_gyroscope_std_yaxis                        
-* average_time_body_gyroscope_std_zaxis                        
-* average_time_body_gyroscope_jerk_mean_xaxis                  
-* average_time_body_gyroscope_jerk_mean_yaxis                  
-* average_time_body_gyroscope_jerk_mean_zaxis                  
-* average_time_body_gyroscope_jerk_std_xaxis                   
-* average_time_body_gyroscope_jerk_std_yaxis                   
-* average_time_body_gyroscope_jerk_std_zaxis                   
-* average_time_body_accelerometer_magnitude_mean               
-* average_time_body_accelerometer_magnitude_std                
-* average_time_gravity_accelerometer_magnitude_mean            
-* average_time_gravity_accelerometer_magnitude_std             
-* average_time_body_accelerometer_jerk_magnitude_mean          
-* average_time_body_accelerometer_jerk_magnitude_std           
-* average_time_body_gyroscope_magnitude_mean                   
-* average_time_body_gyroscope_magnitude_std                    
-* average_time_body_gyroscope_jerk_magnitude_mean              
-* average_time_body_gyroscope_jerk_magnitude_std               
-* average_frequency_body_accelerometer_mean_xaxis              
-* average_frequency_body_accelerometer_mean_yaxis              
-* average_frequency_body_accelerometer_mean_zaxis              
-* average_frequency_body_accelerometer_std_xaxis               
-* average_frequency_body_accelerometer_std_yaxis               
-* average_frequency_body_accelerometer_std_zaxis               
-* average_frequency_body_accelerometer_mean_freq_xaxis         
-* average_frequency_body_accelerometer_mean_freq_yaxis         
-* average_frequency_body_accelerometer_mean_freq_zaxis         
-* average_frequency_body_accelerometer_jerk_mean_xaxis         
-* average_frequency_body_accelerometer_jerk_mean_yaxis         
-* average_frequency_body_accelerometer_jerk_mean_zaxis         
-* average_frequency_body_accelerometer_jerk_std_xaxis          
-* average_frequency_body_accelerometer_jerk_std_yaxis          
-* average_frequency_body_accelerometer_jerk_std_zaxis          
-* average_frequency_body_accelerometer_jerk_mean_freq_xaxis    
-* average_frequency_body_accelerometer_jerk_mean_freq_yaxis    
-* average_frequency_body_accelerometer_jerk_mean_freq_zaxis    
-* average_frequency_body_gyroscope_mean_xaxis                  
-* average_frequency_body_gyroscope_mean_yaxis                  
-* average_frequency_body_gyroscope_mean_zaxis                  
-* average_frequency_body_gyroscope_std_xaxis                   
-* average_frequency_body_gyroscope_std_yaxis                   
-* average_frequency_body_gyroscope_std_zaxis                   
-* average_frequency_body_gyroscope_mean_frequency_xaxis             
-* average_frequency_body_gyroscope_mean_frequency_yaxis             
-* average_frequency_body_gyroscope_mean_frequency_zaxis             
-* average_frequency_body_accelerometer_magnitude_mean          
-* average_frequency_body_accelerometer_magnitude_std           
-* average_frequency_body_accelerometer_magnitude_mean_frequency     
-* average_frequency_body_accelerometer_jerk_magnitude_mean     
-* average_frequency_body_accelerometer_jerk_magnitude_std      
-* average_frequency_body_accelerometer_jerk_magnitude_mean_frequency
-* average_frequency_body_gyroscope_magnitude_mean              
-* average_frequency_body_gyroscope_magnitude_std               
-* average_frequency_body_gyroscope_magnitude_mean_frequency         
-* average_frequency_body_gyroscope_jerk_magnitude_mean         
-* average_frequency_body_gyroscope_jerk_magnitude_std          
-* average_frequency_body_gyroscope_jerk_magnitude_mean_frequency
  [1] "subjectid"                                                         
  [2] "activity"                                                          
  [3] "average_time_body_accelerometer_mean_xaxis"                        
@@ -188,6 +107,7 @@ There are 81 variables in this dataset,except first variale 'subjectid' and seco
 [73] "average_frequency_body_accelerometer_jerk_magnitude_mean"          
 [74] "average_frequency_body_accelerometer_jerk_magnitude_std"           
 [75] "average_frequency_body_accelerometer_jerk_magnitude_mean_frequency"
+
 [76] "average_frequency_body_gyroscope_magnitude_mean"                   
 [77] "average_frequency_body_gyroscope_magnitude_std"                    
 [78] "average_frequency_body_gyroscope_magnitude_mean_frequency"         
