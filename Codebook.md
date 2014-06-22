@@ -107,6 +107,7 @@ There are 81 variables in this dataset. except first variale 'subjectid' is subj
 [73] "average_frequency_body_accelerometer_jerk_magnitude_mean"          
 [74] "average_frequency_body_accelerometer_jerk_magnitude_std"           
 [75] "average_frequency_body_accelerometer_jerk_magnitude_mean_frequency"
+
 [76] "average_frequency_body_gyroscope_magnitude_mean"                   
 [77] "average_frequency_body_gyroscope_magnitude_std"                    
 [78] "average_frequency_body_gyroscope_magnitude_mean_frequency"         
