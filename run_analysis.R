@@ -2,8 +2,8 @@
 
 #Check and set working directory
 
-if(getwd() != "C:/Users/songl/Dropbox/Coursera/cleaningdata/project")
-  setwd("C:/Users/Songl/Dropbox/Coursera/cleaningdata/project")
+if(getwd() != "C:/Users/song/Dropbox/Coursera/cleaningdata/project")
+  setwd("C:/Users/Song/Dropbox/Coursera/cleaningdata/project")
  
 #step 1
 
@@ -15,19 +15,16 @@ trainid <- read.table("./UCI HAR Dataset/train/subject_train.txt")
 #combine to make traindata
 traindata <- cbind(trainx,trainy,trainid)
 
-
 #read test data
 testx <- read.table("./UCI HAR Dataset/test/X_test.txt")
 testy <- read.table("./UCI HAR Dataset/test/y_test.txt")
 testid <- read.table("./UCI HAR Dataset/test/subject_test.txt")
-
 
 #combine to make test data
 testdata <- cbind(testx,testy,testid)
 
 #concatenate two datasets into one
 traintest <- rbind(traindata,testdata)
-
 
 #Step 2:  find measurements on the mean and standard deviation
 
@@ -52,32 +49,26 @@ as.vector(varnameclean)
 
 names(traintest) <- c(varnameclean,"act","subjectid") 
 
-
 #Step:3 Uses descriptive activity names to name the activities in the data set
 # read activity labels from activity_labels.txt
 
 activitylabel <- read.table("./UCI HAR Dataset/activity_labels.txt")
-
 traintestdata <- merge(traintest,activitylabel,by.x="act",by.y="V1",all=T)
 
 #reoder,rename and clean dataset
 tidy <- traintestdata[,c(81,82,seq(1:80))]
-
 colnames(tidy)[2] <- "activity"
 
 #remove varialbe act and keepp activity 
 tidydata <- tidy[,-3]
 
-
 #step: 4
-#create summary tidy dataset by average each varialbe for each subject and each activity
-
+#create a tidy dataset by average each varialbe by each subject and each activity
 tidysummary <- aggregate(. ~ subjectid + activity, tidydata, mean)
 
 #modify varaible names to make it descriptive and easy to follow
 
 summarynames1<- gsub('tBody','average_time_body',names(tidysummary))
-
 summarynames2<- gsub('fBody','average_frequency_body',summarynames1)
 summarynames3<- gsub('tGravity','average_time_gravity',summarynames2)
 summarynames4<- gsub('Acc','_accelerometer_',summarynames3)
@@ -89,7 +80,7 @@ summarynames9<- gsub('std','std',summarynames8)
 summarynames10<- gsub('X','_xaxis',summarynames9)
 summarynames11<- gsub('Y','_yaxis',summarynames10)
 summarynames12<- gsub('Z','_zaxis',summarynames11)
-summarynames13<- gsub('meanFreq','mean_freq',summarynames12)
+summarynames13<- gsub('meanFreq','mean_frequency',summarynames12)
 summarynames14 <- gsub('bodyBody','body',summarynames13) 
 summarynames <- gsub('__','_',summarynames14) 
 
@@ -97,7 +88,11 @@ summarynames <- gsub('__','_',summarynames14)
 colnames(tidysummary) <- summarynames
 
 #export tidy data 
- 
-write.table(tidysummary, file = "summary.txt", sep = ",", col.names = colnames(tidysummary))
+write.table(tidysummary, file = "mean_of_measures.txt", sep = ",", col.names = colnames(tidysummary))
 
+# tidy data set can be read in by
+# read.table(file = "mean_of_measures.txt",sep = ",", header = TRUE, stringsAsFactors = T) 
+
+#export tidy data to a csv file for eacy read
+write.table(tidysummary, file = "mean_of_measures.csv", sep = ",", col.names = colnames(tidysummary))
 

@@ -1,9 +1,9 @@
-##  "Getting and cleaning data' course project cookbook
+##  "Getting and cleaning data' Course Project Cookbook
 
 ### Why it is tidy.
 
-The tidy dataset tidysummary was created by calculating the average of each measurements. It is tidy data because 1) each row is one observation 2) each coloumn is one measurement 3) it is one type of table 4) there is one link key 'subjectid' can be linked to other table if needed.
-
+The tidy dataset tidysummary(uploaded as mean_of_measures.txt) was created by calculating the mean of each measurement. It is tidy data because 1) each row is one observation 2) each colomn is one measurement 3) it is one type of table 4) there is one link key 'subjectid' can be linked to other table if needed. Note that it is in a wide format, so it needs to be downloaded and read into R to see this dataset in a proper way. A mean_of_measures.csv is also included for easy review. 
+ 
 ### Reason for using underscore in variable names.
 
 Due to long variable names, underscore were used in the variable names to help seprate a single long string to a more readable varialbe names.

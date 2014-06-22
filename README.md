@@ -19,8 +19,9 @@ and the data can be downloaded from https://d396qusza40orc.cloudfront.net/getdat
 * cookbook.md: It includes description, rules to create tidydata, description of variables names and data type.
 * run_analysis.R: A R script to clean, prepare the tidy data and do basic analysis.
 * mean_of_measures.txt: A tidy dataset including subject identifier, activity lable and calculated mean of all measurements by each subject and each activity. It can be read into R by
- read.table(file = "mean_of_measures.txt",sep = ",", header = TRUE, stringsAsFactors = F). 
- 
+ read.table(file = "mean_of_measures.txt",sep = ",", header = TRUE, stringsAsFactors = T). 
+* mean_of_measures.csv: tidy dataset in comma separated valued file format.
+
 Please note that in the R script, there are two tidy datasets, one is called tidydata, the other is tidysummary, which was saved as mean_of_measures.txt and was uploaded per project request.
 
 ### Programming:
@@ -29,8 +30,8 @@ Assuming the raw data 'UCI HAR Dataset' is downloaded and the R working director
 
 #### Step 1.
 Read raw data into R by read.table() functions. Since there are three files for each data source(train or test), 
-there will be 3 read.table() functions for each source so we got trainx from X_train.txt,trainy from Y_train.txt,trainid from train.txt 
-and testx from x_test.txt,testy from y_test.txt and testid from test.txt.
+there will be 3 read.table() functions for each source so we got trainx from X_train.txt,trainy from Y_train.txt,trainid from subject_train.txt 
+and testx from x_test.txt,testy from y_test.txt and testid from subject_test.txt.
 
 After reading data into R, merge rainx,trainy and trainid into one single dataset called traindata and merge testx,testy and testid to one single dataset testdata use cbind(),
 then using rbind() to concatenate two datasets traindata and testdata into one dataset called traintest.
