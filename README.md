@@ -22,7 +22,8 @@ and the data can be downloaded from https://d396qusza40orc.cloudfront.net/getdat
  read.table(file = "mean_of_measures.txt",sep = ",", header = TRUE, stringsAsFactors = T). 
 * mean_of_measures.csv: tidy dataset in comma separated valued file format.
 * UCI HAR Dataset: the downloaded raw dataset.
-Please note that in the R script, the tidy data set is tidysummary, which was saved as mean_of_measures.txt and was uploaded per project request.
+
+Please note that in the R script, the tidy data set is called tidysummary, which was saved as mean_of_measures.txt and was uploaded per project request.
 
 ### Programming:
 
@@ -39,7 +40,7 @@ then using rbind() to concatenate two datasets traindata and testdata into one d
 #### Step 2.
 
 Read feasures.txt in using read.table() and get rid of special characters like '()-' to make varialbe names easy 
-to handle. Using grep() to find those varialbes with 'mean()' or 'std()', subset and keep only those variables, adding 'act' and 'subjectid' to traintest dataset.
+to handle. Using grep() to find those varialbes with 'mean()' or 'std()' and exclude meanFreq using sqlpf(), subset and keep only those variables, adding 'act' and 'subjectid' to traintest dataset.
 
 
 #### step 3.

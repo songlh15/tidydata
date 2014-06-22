@@ -1,4 +1,4 @@
-#course project 
+#Course Project 
 
 #Check and set working directory
 
@@ -90,12 +90,14 @@ summarynames <- gsub('__','_',summarynames11)
 #add descript names into data
 colnames(tidysummary) <- summarynames
 
-#export tidy data to a text file
+#step 5
+
+#output tidy data for further analsyis
 write.table(tidysummary, file = "mean_of_measures.txt", sep = ",", col.names = colnames(tidysummary))
 
-# tidy data set can be read in by
+# tidy data set can be read into R by
 # read.table(file = "mean_of_measures.txt",sep = ",", header = TRUE, stringsAsFactors = T) 
 
-#export tidy data to a csv file for eacy review
+#export tidy data to a csv file for easy review
 write.table(tidysummary, file = "mean_of_measures.csv", sep = ",", col.names = colnames(tidysummary))
 
