@@ -49,7 +49,7 @@ Read activity_labels.txt using read.table() into R and merge it by activty ident
 #### step 4.
 Summarize each measurements group by subjectid and activity using aggregate() function, and make variable names readable by adding '_' between all lower case characters.
 
-### Other 
+### Other comments
 Detail programming explanation can be seen from the comments line in run_anlaysis.R.
 
 Detail information about variable names convention and data dictionary can be found at cookbook.md.

@@ -24,9 +24,9 @@ Since this project request us to calculate the mean of the measurements, 'averag
  1. Domain signal: 'time' or 'frequency', time unit is second and frequency is Hz
  2. Sensor signals: 'accelerometer' or 'gyroscope' 
  3  Sensor accelaration signal componets: 'body' or 'gravity'
- 4. statistical summary: 'mean' or 'std'(Standard Deviation)
+ 4. statistis: 'mean' or 'std'(Standard Deviation)
  5. Calculated or derived value: 'jerk' and/or 'magnitude' is present when that measurement was calaculated
- 6. 'xaxis' or 'yaxis' or 'zaxis' (3-axial signals in x,y or z direction) is present when that measurement existed in the orignal dataset
+ 6. 'xaxis' or 'yaxis' or 'zaxis' (3-axial signals in x,y or z direction) is present when that measurement was calculated
 
 ### Data dictinary:
 
@@ -98,18 +98,18 @@ There are 81 variables in this dataset,except 'subjectid' and 'activity', variab
 * average_frequency_body_gyroscope_std_xaxis                   
 * average_frequency_body_gyroscope_std_yaxis                   
 * average_frequency_body_gyroscope_std_zaxis                   
-* average_frequency_body_gyroscope_mean_freq_xaxis             
-* average_frequency_body_gyroscope_mean_freq_yaxis             
-* average_frequency_body_gyroscope_mean_freq_zaxis             
+* average_frequency_body_gyroscope_mean_frequency_xaxis             
+* average_frequency_body_gyroscope_mean_frequency_yaxis             
+* average_frequency_body_gyroscope_mean_frequency_zaxis             
 * average_frequency_body_accelerometer_magnitude_mean          
 * average_frequency_body_accelerometer_magnitude_std           
-* average_frequency_body_accelerometer_magnitude_mean_freq     
+* average_frequency_body_accelerometer_magnitude_mean_frequency     
 * average_frequency_body_accelerometer_jerk_magnitude_mean     
 * average_frequency_body_accelerometer_jerk_magnitude_std      
-* average_frequency_body_accelerometer_jerk_magnitude_mean_freq
+* average_frequency_body_accelerometer_jerk_magnitude_mean_frequency
 * average_frequency_body_gyroscope_magnitude_mean              
 * average_frequency_body_gyroscope_magnitude_std               
-* average_frequency_body_gyroscope_magnitude_mean_freq         
+* average_frequency_body_gyroscope_magnitude_mean_frequency         
 * average_frequency_body_gyroscope_jerk_magnitude_mean         
 * average_frequency_body_gyroscope_jerk_magnitude_std          
-* average_frequency_body_gyroscope_jerk_magnitude_mean_freq
+* average_frequency_body_gyroscope_jerk_magnitude_mean_frequency
