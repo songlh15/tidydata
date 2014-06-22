@@ -87,12 +87,12 @@ summarynames <- gsub('__','_',summarynames14)
 #add descript names into data
 colnames(tidysummary) <- summarynames
 
-#export tidy data 
+#export tidy data to a text file
 write.table(tidysummary, file = "mean_of_measures.txt", sep = ",", col.names = colnames(tidysummary))
 
 # tidy data set can be read in by
 # read.table(file = "mean_of_measures.txt",sep = ",", header = TRUE, stringsAsFactors = T) 
 
-#export tidy data to a csv file for eacy read
+#export tidy data to a csv file for eacy review
 write.table(tidysummary, file = "mean_of_measures.csv", sep = ",", col.names = colnames(tidysummary))
 
