@@ -31,11 +31,17 @@ traintest <- rbind(traindata,testdata)
 #read features to find corresponding variables
 feature <- read.table("./UCI HAR Dataset/features.txt")
 
-#find 'mean' or 'std' from those variable lists
-features <- feature[(grep('mean()|std()',feature$V2)),]
+#find 'mean()' or 'std()' from those variable lists
+features <- feature[(grep("mean()|std()",feature$V2)),]
 
-varlist <- as.vector(features$V1)
-varname <- as.vector(features$V2)
+#exclude those with meanFreq()
+exclude <- features[grep('meanFreq()',features$V2),]
+
+library(sqldf)
+featureclean <- sqldf("select * from features where V2 not in (select distinct V2 from exclude)")
+
+varlist <- as.vector(featureclean$V1)
+varname <- as.vector(featureclean$V2)
 
 #keep only those variablees we are intrested in and two identifiers
 traintest <- traintest[,c(varlist,562,563)]
@@ -56,15 +62,15 @@ activitylabel <- read.table("./UCI HAR Dataset/activity_labels.txt")
 traintestdata <- merge(traintest,activitylabel,by.x="act",by.y="V1",all=T)
 
 #reoder,rename and clean dataset
-tidy <- traintestdata[,c(81,82,seq(1:80))]
-colnames(tidy)[2] <- "activity"
+fortidy <- traintestdata[,c(68,69,seq(1:67))]
+colnames(fortidy)[2] <- "activity"
 
 #remove varialbe act and keepp activity 
-tidydata <- tidy[,-3]
+longdata <- fortidy[,-3]
 
 #step: 4
 #create a tidy dataset by average each varialbe by each subject and each activity
-tidysummary <- aggregate(. ~ subjectid + activity, tidydata, mean)
+tidysummary <- aggregate(. ~ subjectid + activity, longdata, mean)
 
 #modify varaible names to make it descriptive and easy to follow
 
@@ -75,14 +81,11 @@ summarynames4<- gsub('Acc','_accelerometer_',summarynames3)
 summarynames5<- gsub('Gyro','_gyroscope_',summarynames4)
 summarynames6<- gsub('Jerk','_jerk_',summarynames5)
 summarynames7<- gsub('Mag','_magnitude_',summarynames6)
-summarynames8<- gsub('mean','mean',summarynames7)
-summarynames9<- gsub('std','std',summarynames8)
-summarynames10<- gsub('X','_xaxis',summarynames9)
-summarynames11<- gsub('Y','_yaxis',summarynames10)
-summarynames12<- gsub('Z','_zaxis',summarynames11)
-summarynames13<- gsub('meanFreq','mean_frequency',summarynames12)
-summarynames14 <- gsub('bodyBody','body',summarynames13) 
-summarynames <- gsub('__','_',summarynames14) 
+summarynames8<- gsub('X','_xaxis',summarynames7)
+summarynames9<- gsub('Y','_yaxis',summarynames8)
+summarynames10<- gsub('Z','_zaxis',summarynames9)
+summarynames11 <- gsub('bodyBody','body',summarynames10) 
+summarynames <- gsub('__','_',summarynames11) 
 
 #add descript names into data
 colnames(tidysummary) <- summarynames

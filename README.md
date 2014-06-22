@@ -22,7 +22,7 @@ and the data can be downloaded from https://d396qusza40orc.cloudfront.net/getdat
  read.table(file = "mean_of_measures.txt",sep = ",", header = TRUE, stringsAsFactors = T). 
 * mean_of_measures.csv: tidy dataset in comma separated valued file format.
 * UCI HAR Dataset: the downloaded raw dataset.
-Please note that in the R script, there are two tidy datasets, one is called tidydata, the other is tidysummary, which was saved as mean_of_measures.txt and was uploaded per project request.
+Please note that in the R script, the tidy data set is tidysummary, which was saved as mean_of_measures.txt and was uploaded per project request.
 
 ### Programming:
 
@@ -39,15 +39,18 @@ then using rbind() to concatenate two datasets traindata and testdata into one d
 #### Step 2.
 
 Read feasures.txt in using read.table() and get rid of special characters like '()-' to make varialbe names easy 
-to handle. Using grep() to find those varialbes with 'mean()' or 'std()', subset and keep only those variables .
-adding 'act' and 'subjectid' to traintest dataset.
+to handle. Using grep() to find those varialbes with 'mean()' or 'std()', subset and keep only those variables, adding 'act' and 'subjectid' to traintest dataset.
 
 
 #### step 3.
-Read activity_labels.txt using read.table() into R and merge it by activty identifier with traintest dataset to create tidy dataset called tidydata,reorder variables and change variables name 'act' to 'activity'.
+Read activity_labels.txt using read.table() into R and merge it by activty identifier 'act' with traintest dataset to create a long format dataset called longdata,reorder variables and change variable name 'act' to 'activity'.
 
 #### step 4.
-Summarize each measurements group by subjectid and activity using aggregate() function, and make variable names readable by adding '_' between all lower case characters.
+Summarize and get average of each measurements group by subjectid and activity using aggregate() function, and make variable names more readable and descriptive by using full English words and adding '_' between all lower case words.
+
+#### step 5.
+Create the wide format tidy dataset called tidysummary and output it to mean_of_measures.txt for further analysis.
+
 
 ### Other comments
 Detail programming explanation can be seen from the comments line in run_anlaysis.R.
