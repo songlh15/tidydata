@@ -2,7 +2,7 @@
 
 ### Why it is tidy.
 
-The tidy dataset tidysummary(uploaded as mean_of_measures.txt) was created by calculating the mean of each measurement. It is tidy data because 1) each row is one observation 2) each colomn is one measurement 3) it is one type of table 4) there is one link key 'subjectid' can be linked to other table if needed. Note that it is in a wide format, so it needs to be downloaded and read into R to see this dataset in a proper way. A mean_of_measures.csv is also included for easy review. 
+The tidy dataset tidysummary(uploaded as mean_of_measures.txt) was created by calculating the mean of each measurement. It is a tidy data set because 1) each row is one observation 2) each colomn is one measurement 3) it is one type of table 4) there is one link key 'subjectid' can be linked to other table if needed. Note that it is in a wide format, so it needs to be downloaded and read into R to see this data set in a proper way. A csv version of this tidy data set mean_of_measures.csv is also included for easy review. 
  
 ### Reason for using underscore in variable names.
 
@@ -30,7 +30,7 @@ Since this project request us to calculate the mean of the measurements, 'averag
 
 ### Data dictionary:
 
-There are 81 variables in this dataset. except first variale 'subjectid' is subject identifier range from 1 to 30, second variable 'activity' includes six levels of acitivities include WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITING ,STANDING AND LAYING. Variable number 3 to 81 are calculated average values from each measurement by each subjectid and each activity, so they are numeric. A list of variables by their order in the dataset is as following:
+There are 81 variables in this dataset.First variale 'subjectid' is subject identifier ranges from 1 to 30, second variable 'activity' includes six levels of acitivities include WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITING ,STANDING AND LAYING. Variable number 3 to 81 are calculated average values from each measurement by each subjectid and each activity, so they are numeric. A list of variables by their order in the dataset is as following:
 
  [1] "subjectid"                                                         
  [2] "activity"                                                          
