@@ -19,19 +19,18 @@ Variable 'subjectid' is an identifier ranges from 1 to 30 to identify volunteers
 *  STANDING
 *  LAYING
 
-Since this project request us to calculate the mean of the measurements, 'average' is added to the begining of every measurement variable names. Each meaasurement varialbe may include the following elements:
+Since this project request us to calculate the mean of the measurements, 'average' is added to the begining of every measurement variable names.   Each meaasurement variable may include the following elements:
 
- 1. 'time' or 'frequency'  
- 2. 'body' or 'gravity' 
- 3  'accelerometer' or 'gyroscope' 
- 4. statistical summary 'mean' or 'std'(Standard Deviation)
- 5. 'jerk' or 'magnitude' is present when that measurement was done in the orignal dataset
- 6. 'xaxis' or 'yaxis' or 'zaxis' (3-axial direction) is present when that measurement existed in the orignal dataset
- 7. 'mean_freq'(mean frequency) is present when that measurements existed in the orignal dataset
+ 1. Domain signal: 'time' or 'frequency', time unit is second and frequency is Hz
+ 2. Sensor signals: 'accelerometer' or 'gyroscope' 
+ 3  Sensor accelaration signal componets: 'body' or 'gravity'
+ 4. statistical summary: 'mean' or 'std'(Standard Deviation)
+ 5. Calculated or derived value: 'jerk' and/or 'magnitude' is present when that measurement was calaculated
+ 6. 'xaxis' or 'yaxis' or 'zaxis' (3-axial signals in x,y or z direction) is present when that measurement existed in the orignal dataset
 
 ### Data dictinary:
 
-There are 81 variables in this dataset,except 'subjectid' and 'activity', variable number 3 to 81 are mean value from each measurement by each subjectid and each activity, so they are numeric and their variable names start with 'average' and end with 'axis' or 'mean' or 'std' or 'freq'. A list of variables by their order in the dataset is as following:
+There are 81 variables in this dataset,except 'subjectid' and 'activity', variable number 3 to 81 are calculated average value from each measurement by each subjectid and each activity, so they are numeric. A list of variables by their order in the dataset is as following:
 
 * subjectid:  subject identifier range from 1 to 30.                                             
 * activity:   six levels of acitivities include WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITING ,STANDING AND LAYING.                                                   
