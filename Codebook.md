@@ -28,7 +28,7 @@ Since this project request us to calculate the mean of the measurements, 'averag
  5. Calculated or derived value: 'jerk' and/or 'magnitude' is present when that measurement was calaculated
  6. 'xaxis' or 'yaxis' or 'zaxis' (3-axial signals in x,y or z direction) is present when that measurement was calculated
 
-### Data dictinary:
+### Data dictionary:
 
 There are 81 variables in this dataset. except first variale 'subjectid' is subject identifier range from 1 to 30, second variable 'activity' includes six levels of acitivities include WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITING ,STANDING AND LAYING. Variable number 3 to 81 are calculated average values from each measurement by each subjectid and each activity, so they are numeric. A list of variables by their order in the dataset is as following:
 
@@ -107,7 +107,6 @@ There are 81 variables in this dataset. except first variale 'subjectid' is subj
 [73] "average_frequency_body_accelerometer_jerk_magnitude_mean"          
 [74] "average_frequency_body_accelerometer_jerk_magnitude_std"           
 [75] "average_frequency_body_accelerometer_jerk_magnitude_mean_frequency"
-
 [76] "average_frequency_body_gyroscope_magnitude_mean"                   
 [77] "average_frequency_body_gyroscope_magnitude_std"                    
 [78] "average_frequency_body_gyroscope_magnitude_mean_frequency"         
